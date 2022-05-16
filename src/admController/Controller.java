@@ -11,6 +11,8 @@ import java.util.List;
 import usuarioModel.Usuario;
 
 public class Controller {
+    
+    //classe de controlle das acoes da view com o dao
     public static boolean verificaAdm(String login, String senha) throws SQLException, ClassNotFoundException, NoSuchAlgorithmException{
         boolean user = false;
         for(admModel.Adm adm : getAdm(0)){
