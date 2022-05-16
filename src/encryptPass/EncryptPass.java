@@ -6,6 +6,7 @@ import java.security.SecureRandom;
 import java.sql.SQLException;
 import static admController.Controller.*;
 public class EncryptPass {
+    //arquivo para criar o hash da senha.
     public static void main(String[] args) throws NoSuchAlgorithmException, SQLException, ClassNotFoundException{
         System.out.println(createHash("bernar023"));
     }
@@ -34,7 +35,7 @@ public class EncryptPass {
         return generatedPassword;
     }
     
-    private static String getSalt() throws NoSuchAlgorithmException {
+    static String getSalt() throws NoSuchAlgorithmException {
         SecureRandom sr = SecureRandom.getInstance("SHA1PRNG");
         byte[] salt = new byte[16];
         sr.nextBytes(salt);
